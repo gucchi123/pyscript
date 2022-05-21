@@ -25,7 +25,7 @@
         
         url_content = open_url("https://raw.githubusercontent.com/gucchi123/pyscript/main/mmm.csv")
 
-        df = pd.read_csv(url_content)
+        df = pd.read_csv(url_content, sep=",")
         pyscript.write("rowdata", df.head())
     </py-script>    
 
