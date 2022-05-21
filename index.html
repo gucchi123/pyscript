@@ -9,7 +9,7 @@
         - matplotlib
         - pandas
         - paths:
-            - /mmm.csv
+            - ./mmm.csv
     </py-env>
 
     </head>
@@ -22,14 +22,14 @@
 
     <py-script output="rowdata">
         import pandas as pd
-        df = pd.read_csv("mmm.csv")
+        df = pd.read_csv("./mmm.csv")
         pyscript.write("rowdata", df.head())
     </py-script>    
 
     <py-script output="plot">
         import pandas as pd
         import matplotlib.pyplot as plt
-        df = pd.read_csv("mmm.csv")
+        df = pd.read_csv("./mmm.csv")
         fig = plt.figure(figsize=(5,5))
         plt.scatter(df.iloc[:, 1], df.iloc[:, 2])
         fig
